@@ -380,7 +380,7 @@ const useRegisterOutlineCommands = () => {
               await request("documents.create", {
                 title: entry.title,
                 text: markdownContent,
-                collectionId,
+                parentDocumentId: collectionId,
                 publish: true,
               })
               toast.success(t("entry_actions.saved_to_outline"), {
